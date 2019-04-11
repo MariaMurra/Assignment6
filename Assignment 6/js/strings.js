@@ -35,9 +35,11 @@ window.alert(result);*/
 window.alert(allChar.search(word));*/
 
 //STEP 8
-/*var old_string = "The quick brown fox jumps over the lazy dog",
+/*
+var old_string = "The quick brown fox jumps over the lazy dog",
     new_string = old_string.slice(30);
-window.alert(new_string.toUpperCase());*/
+window.alert(new_string.toUpperCase());
+*/
 
 //STEP 9
 /*var upperCase = " THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG ",
@@ -45,7 +47,7 @@ window.alert(new_string.toUpperCase());*/
 window.alert(result);*/
 
 //STEP 10
-var step10 = "the quick brown fox jumps over the lazy dog",
+/*var step10 = "the quick brown fox jumps over the lazy dog",
     cap1st = step10[0].toUpperCase();
-window.alert(step10.replace(step10[0], cap1st));
+window.alert(step10.replace(step10[0], cap1st));*/
 

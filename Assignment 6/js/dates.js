@@ -1,16 +1,50 @@
 /*eslint-env browser*/
 
 //STEP 1 NUMBER OF DAYS IN THE MONTH
-/*var d = new Date();
-window.console.log(d.getDate());*/
-
-//STEP 2 Create an application that gets the month name from a particular date. Display that result within the console window.
-var d = new Date("09–02-12");
-window.console.log(d);
+var d = new Date();
+window.console.log(d.getDate());
 
 
-//STEP 3.	Create an application that tests whether a date is a weekend. Display that result within the console window
+function whatMonth(usrDate) {
+    "use strict";
+    var month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+        d = new Date(usrDate),
+        name = month[d.getMonth()];
+    window.console.log(name);
+}
+whatMonth("1999, 07, 24");
 
-//STEP 4 Create an application that gets yesterday’s day of the week. For instance, if today is Tuesday, the console window should display Monday
 
-//STEP 5 Create an application that gets the current day of the week. The twist here is that I want only the first letter of the day. If today is Tuesday, the letter T should be displayed in the console window.
+function isWeekend(yourDate) {
+    "use strict";
+    var dt = new Date(yourDate), x = dt.getDay();
+    if (x === 6 || x === 0) {
+        window.console.log("It's a weekend");
+    } else {
+        window.console.log("Not a weekend");
+    }
+}
+isWeekend("10, 24, 2020");
+
+function whatDay() {
+    "use strict";
+    var day = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        d = new Date(),
+        name = day[d.getDay() - 1];
+    if (name === -1) {
+        window.console.log("Sunday");
+    } else {
+        window.console.log(name);
+    }
+}
+whatDay();
+
+
+function wD() {
+    "use strict";
+    var dayName = ["S", "M", "T", "W", "T", "F", "S", "S"],
+        d = new Date(),
+        name = dayName[d.getDay()];
+    window.console.log(name);
+}
+wD();

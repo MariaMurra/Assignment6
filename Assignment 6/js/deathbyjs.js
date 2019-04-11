@@ -1,43 +1,61 @@
 /*eslint-env browser*/
-//Solve the following string/math/number/function/array-related problems. Each solution should be written within its own function and the output should be displayed within a console window. The display should be the return value of the function call.
 
-/*//STEP 1.	Write a JavaScript function that returns a passed string with letters in alphabetical order. Assume punctuation and number symbols are not included in the passed-in string.
-
-Sample Data and Output
-Example string: 'webmaster' 
-Expected Output: 'abeemrstw'*/
- 
-
-/*
-//STEP 22.	Write a JavaScript function that accepts a string as a parameter and converts the first letter of each word of the string to upper case.
-
-Sample Data and Output
-Example string: 'the quick brown fox' 
-Expected Output: 'The Quick Brown Fox'
-*/
+function stepOne(val) {
+    "use strict";
+    var toSort = val.split("").sort().join("");
+    window.console.log(toSort);
+}
+stepOne("webmaster");
 
 
-/*//STEP 3 Write a JavaScript function that accepts a string as a parameter and counts the number of vowels within the string.
-
-Sample Data and Output
-Example string: 'The quick brown fox' 
-Expected Output: 5*/
-
-
-
-/*
-//STEP 4.	Write a JavaScript function that generates a string id (specified length) of random characters.
-
-Sample Data and Output
-Expected Output: RCv1SBUC or PmJkc2Y2 or nIi5L0FA
-*/
+function stepTwo(str) {
+    "use strict";
+    var separate = str.split(" "), newStr = [], i;
+    
+    for (i = 0; i < separate.length; i += 1) {
+        newStr.push(separate[i].charAt(0).toUpperCase() + separate[i].slice(1));
+    }
+    return newStr.join(" ");
+}
+window.console.log(stepTwo("the quick brown fox"));
 
 
-/*
-//STEP 5.	Write a JavaScript function that accepts a list of country names as input and returns the longest country name as output.
+function step3(countEm) {
+    "use strict";
+    var vowels = "aeiouAEIOU", vCount = 0, i;
+    for (i = 0; i < countEm.length; i += 1) {
+        if (vowels.indexOf(countEm[i]) !== -1) {
+            vCount += 1;
+        }
+    }
+    return vCount;
+}
+window.console.log(step3("The quick brown fox"));
 
-Sample Data and Output
-Sample function: Longest_Country_Name(["Australia", "Germany", "United States of America"])
-Expected output: "United States of America"
-*/
+
+function step4(id) {
+    "use strict";
+    var text = "",
+        letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789",
+        i;
+    for (i = 0; i < id; i += 1) {
+        text += letters.charAt(Math.floor(Math.random() * letters.length));
+    }
+    return text;
+}
+window.console.log(step4(8));
+    
+
+
+
+function step5(country) {
+    "use strict";
+    return country.reduce(function (names, country) {
+        return names.length > country.length ? names : country;
+    },
+        "");
+}
+window.console.log(step5(["Australia", "Germany", "United States of America", "Estados Unidos Mexicanos"]));
+
+
 

@@ -16,14 +16,16 @@ window.console.log(round);*/
 window.console.log(round);*/
 
 //STEP 4
+/*
+var usrNum4 = window.prompt("Please write 5 numbers. Separate each number with commas"), i, arr1;
+    
+arr1 = usrNum4.split(",");
+for (i = 0; i < arr1.length; i += 1) {
+    parseInt(arr1[i], 10);
+    window.console.log(Math.max.apply(null, arr1));
+}
+*/
 
-//STILL WORKING ON THIS ONE!
-var usrNum4 = window.prompt("Please write 5 numbers. Separate each number with commas"),
-    max = Math.max(parseInt(usrNum4, 10)),
-    min = Math.min(parseInt(usrNum4, 10));
-
-window.console.log(max);
-window.console.log(min);
 
 //STEP 5
 /*var usrNum5 = window.prompt("Please write a number");
